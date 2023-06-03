@@ -24,8 +24,8 @@
   <iframe id='framey' frameborder=0></iframe>
 </body>
 <script>
-  if (typeof Storage !== "undefined" && localStorage.getItem('random_page')) {
-    var webpage = localStorage.getItem('random_page');
+  if (typeof Storage !== "undefined" && localStorage.getItem('en_random_page')) {
+    var webpage = localStorage.getItem('en_random_page');
     document.getElementById("framey").src = webpage;
   } else {
     var webpages = [];
@@ -37,7 +37,7 @@
     //------------------------------------------
     var random_page = webpages[Math.floor(Math.random() * webpages.length)];
     if (typeof Storage !== "undefined") {
-      localStorage.setItem('random_page', random_page);
+      localStorage.setItem('en_random_page', random_page);
     }
     document.getElementById("framey").src = random_page;
   }
