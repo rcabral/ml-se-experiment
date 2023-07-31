@@ -24,8 +24,8 @@
   <iframe id='framey' frameborder=0></iframe>
 </body>
 <script>
-  if (typeof Storage !== "undefined" && localStorage.getItem('random_page_pt')) {
-    var webpage = localStorage.getItem('random_page_pt');
+  if (typeof Storage !== "undefined" && localStorage.getItem('random_page_serpro')) {
+    var webpage = localStorage.getItem('random_page_serpro');
     document.getElementById("framey").src = webpage;
   } else {
     var webpages = [];
@@ -33,11 +33,11 @@
     //the webpages need to hosted on https sites - if you want more than two just create a new line using the same code as below
     //just change the link to the google form
     webpages.push("https://docs.google.com/forms/d/e/1FAIpQLSfKGte3XHdmjjcU4R5y4R7PAiXpP3eCpCocSJpTqB4v5WYMYw/viewform");
-    webpages.push("https://docs.google.com/forms/d/e/1FAIpQLSfwx-1IeaBEqFDRn8kRSxoopT8BH4EDdVMy1Rf3uPeUS48z7g/viewform");
+    //webpages.push("https://docs.google.com/forms/d/e/1FAIpQLSfwx-1IeaBEqFDRn8kRSxoopT8BH4EDdVMy1Rf3uPeUS48z7g/viewform");
     //------------------------------------------
     var random_page = webpages[Math.floor(Math.random() * webpages.length)];
     if (typeof Storage !== "undefined") {
-      localStorage.setItem('random_page_pt', random_page);
+      localStorage.setItem('random_page_serpro', random_page);
     }
     document.getElementById("framey").src = random_page;
   }
